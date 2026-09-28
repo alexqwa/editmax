@@ -16,23 +16,23 @@ import logoImg from "@/src/assets/logo.svg";
 const navItems: { title: string; href: string }[] = [
   {
     title: "Funcionalidades",
-    href: "/#features",
+    href: "/",
   },
   {
     title: "Preços",
-    href: "/#prices",
+    href: "/",
   },
   {
     title: "Quem usa",
-    href: "/#customers",
+    href: "/",
   },
   {
     title: "Editor",
-    href: "/#editor",
+    href: "/",
   },
   {
     title: "Plataforma",
-    href: "/#auth",
+    href: "/",
   },
 ];
 
@@ -92,7 +92,7 @@ export function Header() {
           <NavigationMenu className="absolute left-1/2 -translate-x-1/2 items-center gap-0.5 hidden md:flex">
             <NavigationMenuList>
               {navItems.map((item) => (
-                <NavigationMenuItem key={item.href}>
+                <NavigationMenuItem key={item.title}>
                   <NavigationMenuLink
                     className="rounded-lg px-3.5 py-1.5 text-[14px] font-medium transition-all text-[#86868b]! duration-150 hover:bg-[#F2F4F8] hover:text-[#1d1d1f]!"
                     render={<Link href={item.href}>{item.title}</Link>}
@@ -103,7 +103,7 @@ export function Header() {
           </NavigationMenu>
           <div className="ml-auto flex shrink-0 items-center gap-2.5">
             <Link
-              href="/login"
+              href="/"
               className="hidden h-9 items-center justify-center rounded-lg border border-border/60 bg-white px-3.5 text-[13px] font-medium text-foreground transition-all duration-200 hover:bg-muted/50 active:scale-[0.99] active:transition-none sm:inline-flex"
             >
               Acessar Dashboard
@@ -111,7 +111,7 @@ export function Header() {
             <div className="relative inline-flex min-w-0">
               <div className="inline-flex min-w-0 items-stretch overflow-hidden rounded-lg border-[0.5px] border-white/25 bg-[#B1FE7B] ring-1 [--btn-ring:color-mix(in_oklab,var(--color-foreground)_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
                 <Link
-                  href="/help"
+                  href="/"
                   className="flex min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-8 px-4 text-[13px] font-semibold text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060] active:scale-[0.99] active:transition-none"
                 >
                   <span className="min-w-0">
@@ -153,7 +153,7 @@ export function Header() {
         <nav className="flex flex-col px-3 py-2">
           {navItems.map((item) => (
             <Link
-              key={item.href}
+              key={item.title}
               href={item.href}
               className="rounded-lg px-3 py-2.5 text-[14px] font-medium text-muted-foreground transition-colors duration-150 hover:bg-[#F2F4F8] hover:text-foreground"
             >
@@ -165,7 +165,7 @@ export function Header() {
           <div className="relative inline-flex min-w-0 w-full">
             <div className="inline-flex min-w-0 items-stretch shiny-btn w-full overflow-hidden rounded-lg border-[0.5px] border-white/25 bg-[#B1FE7B] ring-1 [--btn-ring:color-mix(in_oklab,var(--color-foreground)_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
               <Link
-                href="/extensao"
+                href="/"
                 className="flex min-w-0 items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-11 flex-1 text-[13.5px] font-semibold text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060]"
               >
                 <span className="min-w-0">Como funciona?</span>
@@ -173,7 +173,7 @@ export function Header() {
             </div>
           </div>
           <Link
-            href="https://app.cargoos.com.br"
+            href="/"
             className="flex h-11 w-full items-center justify-center rounded-lg border border-border/60 text-[13.5px] font-medium text-muted-foreground transition-colors duration-150 hover:bg-[#F2F4F8] hover:text-foreground"
           >
             Acessar Dashboard
