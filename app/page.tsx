@@ -1,11 +1,19 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowUpRightIcon } from "@phosphor-icons/react";
+import Image from "next/image";
+import {
+  CheckIcon,
+  CaretLeftIcon,
+  CaretRightIcon,
+  ArrowUpRightIcon,
+} from "@phosphor-icons/react";
 
 import { Header } from "@/src/components/header";
 import { AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+import mockupImg from "@/public/mockup_4x.png";
 
 export default function Home() {
   return (
@@ -27,7 +35,7 @@ export default function Home() {
                     <div className="relative">
                       <div className="px-8 py-14 lg:px-12 lg:py-20">
                         <div className="flex items-center gap-3 w-fit">
-                          <AvatarGroup>
+                          <AvatarGroup className="hidden lg:flex">
                             <Avatar>
                               <AvatarImage
                                 src="https://github.com/shadcn.png"
@@ -60,31 +68,54 @@ export default function Home() {
                               +99
                             </AvatarGroupCount>
                           </AvatarGroup>
+                          <AvatarGroup className="flex lg:hidden">
+                            <Avatar>
+                              <AvatarImage
+                                src="https://github.com/shadcn.png"
+                                alt="@shadcn"
+                              />
+                              <AvatarFallback>CN</AvatarFallback>
+                            </Avatar>
+                            <Avatar>
+                              <AvatarImage
+                                src="https://github.com/diego3g.png"
+                                alt="@maxleiter"
+                              />
+                              <AvatarFallback>LR</AvatarFallback>
+                            </Avatar>
+                            <Avatar>
+                              <AvatarImage
+                                src="https://github.com/alexqwa.png"
+                                alt="@maxleiter"
+                              />
+                              <AvatarFallback>LR</AvatarFallback>
+                            </Avatar>
+                            <AvatarGroupCount className="bg-[#052D2B] text-[11px] font-semibold text-white">
+                              +99
+                            </AvatarGroupCount>
+                          </AvatarGroup>
                           <span className="text-[13px] text-muted-foreground">
                             <span className="hidden lg:inline">
                               Junte-se aos criadores que já usam a EditMax
                             </span>
                             <span className="lg:hidden">
-                              Junte-se a +300 sellers na Cargoos
+                              Junte-se a +150 criadores na EditMax
                             </span>
                           </span>
                         </div>
                         <h1 className="mt-8 text-[2.5rem] font-semibold leading-[1.2] tracking-[-0.035em] text-[#052D2B] sm:text-[2.75rem] lg:text-[3.5rem] lg:leading-[1.15]">
+                          <span className="block">A máquina de conteúdos</span>
                           <span className="block">
-                            Edite milhares de vídeos
-                          </span>
-                          <span className="block">e agende em todas as</span>
-                          <span className="block mt-1">
-                            plataformas,{" "}
+                            para quem quer{" "}
                             <span className="shiny-btn inline-block -translate-y-1.25 rounded-md bg-[#B1FE7B] px-2 align-middle text-[#052D2B]">
-                              sem esforço.
+                              crescer.
                             </span>
                           </span>
                         </h1>
                         <p className="mt-7 max-w-2xl text-[18px] leading-[1.7] text-muted-foreground sm:text-[22px] sm:leading-[1.6]">
-                          Transforme seus videos em lote, personalize com sua
-                          marca, agende em segundos e publique automaticamente
-                          nas principais redes sociais.
+                          Automatize sua produção de vídeos e transforme horas
+                          de trabalho repetitivo em conteúdo pronto para
+                          publicar.
                         </p>
                         <div className="mt-9 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
                           <div className="relative inline-flex min-w-0 w-full sm:w-auto">
@@ -94,7 +125,7 @@ export default function Home() {
                                 className="flex min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 group/btn h-11 w-full px-6 text-[15px] font-semibold text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060] active:scale-[0.99] active:transition-none"
                               >
                                 <span className="min-w-0">
-                                  Comece agora gratuitamente
+                                  Quero começar automatizar
                                 </span>
                               </Link>
                             </div>
@@ -106,6 +137,13 @@ export default function Home() {
                             Ver demonstração
                           </Link>
                         </div>
+                      </div>
+                      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[55%] overflow-hidden lg:block">
+                        <Image
+                          alt="mockup"
+                          src={mockupImg}
+                          className="absolute h-[70%] right-10 top-1/2 w-auto -translate-y-1/2"
+                        />
                       </div>
                     </div>
                   </div>
@@ -189,9 +227,9 @@ export default function Home() {
                             Edite centenas de vídeos
                           </span>
                           <span className="hidden lg:block">
-                            com um{" "}
+                            com apenas{" "}
                             <span className="inline-block rounded-md bg-[#B1FE7B] px-2 text-[#052D2B]">
-                              só clique.
+                              um clique.
                             </span>
                           </span>
                           <span className="block lg:hidden">
@@ -272,7 +310,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="feature-stories" className="scroll-mt-28">
+        <section id="pricing" className="scroll-mt-28">
           <div
             className="landing-reveal landing-reveal--visible"
             style={{ transitionDelay: "0ms" }}
@@ -285,6 +323,187 @@ export default function Home() {
                   </div>
                   <div className="w-full max-w-345 overflow-hidden rounded-sm bg-[#1E4345] h-10" />
                   <div className="hidden min-w-0.5 flex-1 xl:block">
+                    <div className="relative h-full overflow-hidden rounded-l-sm bg-[#1E4345]" />
+                  </div>
+                </div>
+                <div className="flex gap-px">
+                  <div className="hidden flex-1 xl:block">
+                    <div className="relative h-full overflow-hidden rounded-r-sm bg-[#1E4345]" />
+                  </div>
+                  <div className="flex w-full max-w-345 flex-col gap-px">
+                    <div className="overflow-hidden rounded-sm bg-[#1E4345]">
+                      <div className="px-6 pb-12 pt-20 sm:px-8 sm:pb-14 sm:pt-20 lg:px-10">
+                        <div className="flex items-center justify-between">
+                          <span className="inline-flex w-fit items-center rounded-full bg-[#9EEA6C]/8 px-3.5 py-1.5 text-[14px] font-medium text-[#9EEA6C]">
+                            Planos
+                          </span>
+                          <div className="flex items-center gap-3">
+                            <button
+                              type="button"
+                              aria-label="Anterior"
+                              className="flex size-10 group cursor-pointer items-center justify-center rounded-full border-[0.5px] border-white/15 bg-white/[0.04] transition-colors duration-150 hover:bg-white/[0.08] hover:text-white"
+                            >
+                              <CaretLeftIcon
+                                size={18}
+                                className="text-white/80 group-hover:text-white transition-colors duration-150"
+                              />
+                            </button>
+                            <button
+                              type="button"
+                              aria-label="Anterior"
+                              className="flex size-10 group cursor-pointer items-center justify-center rounded-full border-[0.5px] border-white/15 bg-white/[0.04] transition-colors duration-150 hover:bg-white/[0.08] hover:text-white"
+                            >
+                              <CaretRightIcon
+                                size={18}
+                                className="text-white/80 group-hover:text-white transition-colors duration-150"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                        <div className="mt-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                          <h2 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-white sm:text-4xl lg:text-[3.25rem] lg:leading-[1.15]">
+                            <span className="block lg:hidden">
+                              Acesso total, sem
+                            </span>
+                            <span className="block lg:hidden">
+                              limites. Com uma
+                            </span>
+                            <span className="block lg:hidden">
+                              <span className="shiny-btn inline-block translate-y-1 rounded-md bg-[#B1FE7B] px-2 text-[#1E4345]">
+                                única assinatura.
+                              </span>
+                            </span>
+                            <span className="hidden lg:block">
+                              Acesso total, sem limites.
+                            </span>
+                            <span className="hidden lg:block">
+                              Com uma{" "}
+                              <span className="shiny-btn inline-block translate-y-3 rounded-md bg-[#B1FE7B] px-2 text-[#1E4345]">
+                                única assinatura.
+                              </span>
+                            </span>
+                          </h2>
+                          <p className="max-w-sm text-[15px] leading-[1.75] lg:text-right text-white/60">
+                            Um plano para acompanhar o ritmo da sua produção.
+                            Edite, automatize e publique em escala.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="grid-cols-1 lg:grid-cols-3 grid gap-px">
+                      <div className="rounded-sm bg-[#1E4345] flex flex-1 flex-col p-6 lg:p-8">
+                        <h3 className="mt-5 text-xl font-semibold text-white">
+                          Grátis
+                        </h3>
+                        <p className="mt-1 text-[13px] text-white/40">
+                          10 vídeos por conta nossa, sem renovação
+                        </p>
+                        <div className="mt-6">
+                          <div className="mt-2 flex items-center gap-1.5">
+                            <span className="text-[32px] font-normal tabular-nums leading-none tracking-tight text-white/40">
+                              R$
+                            </span>
+                            <span className="text-[56px] font-bold tabular-nums leading-none tracking-tight text-white">
+                              0
+                            </span>
+                            <span className="text-[32px] font-bold tabular-nums leading-none tracking-tight text-white/60">
+                              ,00
+                            </span>
+                            <span className="ml-1.5 text-[18px] font-medium tabular-nums leading-none tracking-tight text-white/35">
+                              /único
+                            </span>
+                          </div>
+                        </div>
+                        <p className="mt-6 mb-4 text-[12px] text-white/30">
+                          Incluso no plano gratuito
+                        </p>
+                        <div className="space-y-3.5">
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#4B5563] to-[#374151]">
+                              <CheckIcon
+                                size={24}
+                                weight="bold"
+                                className="size-3 stroke-[4px] text-white/70"
+                              />
+                            </div>
+                            <span className="calc-dark-label text-[13px] text-white/60">
+                              Edição e exportação em lote
+                            </span>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-[#4B5563] to-[#374151]">
+                              <CheckIcon
+                                size={24}
+                                weight="bold"
+                                className="size-3 stroke-[4px] text-white/70"
+                              />
+                            </div>
+                            <span className="calc-dark-label text-[13px] text-white/60">
+                              Textos, recortes, fundos, logo e áudio
+                            </span>
+                          </div>
+                        </div>
+                        <div className="relative flex -mx-4 mt-8 mb-8 items-center gap-3">
+                          <div className="h-px flex-1 bg-[linear-gradient(to_right,rgba(255,255,255,0.15),rgba(255,255,255,0.15)_50%,transparent_0,transparent)] bg-[length:5px_1px] [mask-image:linear-gradient(to_right,transparent,black_30%)]"></div>
+                          <span className="shrink-0 rounded-full border border-white/20 bg-[#1E4345] px-3 py-1 text-[11px] tracking-[0.04em] text-white/60 shadow-sm">
+                            Incluso na assinatura Starter
+                          </span>
+                          <div className="h-px flex-1 bg-[linear-gradient(to_right,rgba(255,255,255,0.15),rgba(255,255,255,0.15)_50%,transparent_0,transparent)] bg-[length:5px_1px] [mask-image:linear-gradient(to_left,transparent,black_30%)]"></div>
+                        </div>
+                        <div className="space-y-3.5">
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#9EEA6C] to-[#6BD44C]">
+                              <CheckIcon
+                                size={24}
+                                weight="bold"
+                                className="size-3 stroke-[4px] text-[#0D2D18]"
+                              />
+                            </div>
+                            <span className="calc-dark-label text-[13px] text-white/60">
+                              Tudo do plano gratuito
+                            </span>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#9EEA6C] to-[#6BD44C]">
+                              <CheckIcon
+                                size={24}
+                                weight="bold"
+                                className="size-3 stroke-[4px] text-[#0D2D18]"
+                              />
+                            </div>
+                            <span className="calc-dark-label text-[13px] text-white/60">
+                              100 vídeos
+                            </span>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#9EEA6C] to-[#6BD44C]">
+                              <CheckIcon
+                                size={24}
+                                weight="bold"
+                                className="size-3 stroke-[4px] text-[#0D2D18]"
+                              />
+                            </div>
+                            <span className="calc-dark-label text-[13px] text-white/60">
+                              Modo anti duplicidade
+                            </span>
+                          </div>
+                          <div className="flex items-start gap-3">
+                            <div className="mt-0.5 flex size-4 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#9EEA6C] to-[#6BD44C]">
+                              <CheckIcon
+                                size={24}
+                                weight="bold"
+                                className="size-3 stroke-[4px] text-[#0D2D18]"
+                              />
+                            </div>
+                            <span className="calc-dark-label text-[13px] text-white/60">
+                              Limpador de Metadados
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden flex-1 xl:block">
                     <div className="relative h-full overflow-hidden rounded-l-sm bg-[#1E4345]" />
                   </div>
                 </div>
