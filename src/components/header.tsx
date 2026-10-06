@@ -20,15 +20,11 @@ const navItems: { title: string; href: string }[] = [
   },
   {
     title: "Preços",
-    href: "/",
+    href: "/#pricing",
   },
   {
-    title: "Quem usa",
-    href: "/",
-  },
-  {
-    title: "Editor",
-    href: "/",
+    title: "Dúvidas",
+    href: "/#faq",
   },
   {
     title: "Plataforma",
@@ -46,7 +42,7 @@ export function Header() {
           Garanta <b className="text-white">15% OFF</b> no Plano Publisher.
           Cupom:
         </span>
-        <button className="inline-flex items-center gap-1.5 rounded-md bg-[#9EEA6C] px-2.5 py-0.5 text-[12px] font-bold text-[#1E4345] transition-colors duration-200 hover:bg-[#B1FE7B]">
+        <button className="inline-flex items-center gap-1.5 cursor-pointer rounded-md bg-[#9EEA6C] px-2.5 py-0.5 text-[12px] font-bold text-[#1E4345] transition-colors duration-200 hover:bg-[#B1FE7B]">
           NOVO15
           <span className="relative inline-flex size-3.5">
             <svg
@@ -79,7 +75,7 @@ export function Header() {
           </span>
         </button>
       </div>
-      <header className="fixed top-10.5 left-0 right-0 z-50 border-b border-border/60 bg-white/75 backdrop-blur-md">
+      <header className="fixed top-10.5 left-0 right-0 z-50 border-b border-border/60 bg-white">
         <div className="relative mx-auto flex h-16 max-w-360 items-center px-8 lg:px-12">
           <Link href="/" className="flex shrink-0 items-center">
             <Image
@@ -111,7 +107,7 @@ export function Header() {
             <div className="relative inline-flex min-w-0">
               <div className="inline-flex min-w-0 items-stretch overflow-hidden rounded-lg border-[0.5px] border-white/25 bg-[#B1FE7B] ring-1 [--btn-ring:color-mix(in_oklab,var(--color-foreground)_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
                 <Link
-                  href="/"
+                  href="/#how-works"
                   className="flex min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-8 px-4 text-[13px] font-semibold text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060] active:scale-[0.99] active:transition-none"
                 >
                   <span className="min-w-0">
@@ -155,6 +151,7 @@ export function Header() {
             <Link
               key={item.title}
               href={item.href}
+              onClick={() => setMenuOpen(false)}
               className="rounded-lg px-3 py-2.5 text-[14px] font-medium text-muted-foreground transition-colors duration-150 hover:bg-[#F2F4F8] hover:text-foreground"
             >
               {item.title}
@@ -165,7 +162,8 @@ export function Header() {
           <div className="relative inline-flex min-w-0 w-full">
             <div className="inline-flex min-w-0 items-stretch shiny-btn w-full overflow-hidden rounded-lg border-[0.5px] border-white/25 bg-[#B1FE7B] ring-1 [--btn-ring:color-mix(in_oklab,var(--color-foreground)_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)]">
               <Link
-                href="/"
+                href="/#how-works"
+                onClick={() => setMenuOpen(false)}
                 className="flex min-w-0 items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 h-11 flex-1 text-[13.5px] font-semibold text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060]"
               >
                 <span className="min-w-0">Como funciona?</span>
