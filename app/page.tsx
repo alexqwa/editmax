@@ -771,8 +771,8 @@ export default function Home() {
                     className="h-9 w-auto"
                   />
                   <p className="mt-5 text-[14px] leading-[1.7] text-[#6B7280]">
-                    Inteligência competitiva direto no navegador para monitorar
-                    produtos, vendedores e oportunidades no Mercado Livre.
+                    Sua produção de vídeos em escala. Mais agilidade e menos
+                    trabalho manual.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-x-16 gap-y-8">

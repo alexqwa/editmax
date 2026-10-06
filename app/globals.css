@@ -246,26 +246,4 @@
     left: -50%;
     transform: translate(-200%) rotate(-45deg);
   }
-
-  .landing-reveal {
-    opacity: 0;
-    transition:
-      opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-      transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-    transform: translateY(24px);
-  }
-
-  .landing-reveal--visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .landing-bento-frame {
-    width: 100vw;
-    padding-right: 0.5px;
-    position: relative;
-    left: 50%;
-    overflow: clip;
-    transform: translate(-50%);
-  }
 }
