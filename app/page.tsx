@@ -11,6 +11,8 @@ import {
   ArrowUpRightIcon,
 } from "@phosphor-icons/react";
 
+import { Header } from "@/src/components/header";
+import { PlanCard } from "@/src/components/plan-card";
 import { AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
@@ -22,8 +24,6 @@ import {
 
 import logoImg from "@/src/assets/logo.svg";
 import mockupImg from "@/public/mockup_4x.png";
-import { Header } from "@/src/components/header";
-import { PlanCard } from "@/src/components/plan-card";
 
 const plans = [
   {
@@ -35,6 +35,7 @@ const plans = [
     planCurrentSubscription: {
       title: "Gratuito",
       options: [
+        { label: "Exportar vídeos em 720P" },
         { label: "Edição e exportação em lote" },
         { label: "Textos, recortes, fundos, logo e áudio" },
       ],
@@ -42,9 +43,9 @@ const plans = [
     planNextSubscription: {
       title: "Starter",
       options: [
-        { label: "Tudo do plano Gratuito" },
         { label: "Modo anti duplicidade" },
         { label: "Limpador de Metadados" },
+        { label: "Exportar vídeos em 1080P/30FPS" },
         { label: "Sem marca d'água nos vídeos exportados" },
       ],
     },
@@ -63,6 +64,7 @@ const plans = [
         { label: "Tudo do plano Gratuito" },
         { label: "Modo anti duplicidade" },
         { label: "Limpador de Metadados" },
+        { label: "Exportar vídeos em 1080P/30FPS" },
         { label: "Sem marca d'água nos vídeos exportados" },
       ],
     },
@@ -70,6 +72,7 @@ const plans = [
       title: "Publisher",
       options: [
         { label: "Prioridade no suporte" },
+        { label: "Exportar vídeos em 1080P/60FPS" },
         { label: "Agende suas publicações em +8 plataformas" },
         { label: "Grupo VIP no WhatsApp para networking e suporte" },
       ],
@@ -89,9 +92,10 @@ const plans = [
     planNextSubscription: {
       options: [
         { label: "Edição e exportação em lote" },
-        { label: "Textos, recortes, fundos, logo e áudio" },
         { label: "Modo anti duplicidade" },
         { label: "Limpador de Metadados" },
+        { label: "Exportar vídeos em 1080P/60FPS" },
+        { label: "Textos, recortes, fundos, logo e áudio" },
         { label: "Sem marca d'água nos vídeos exportados" },
         { label: "Prioridade no suporte" },
         { label: "Agende suas publicações em +8 plataformas" },
@@ -587,10 +591,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="bg-white p-6 pt-16 pb-16 lg:p-8 lg:pt-16 lg:pb-16">
-                    <Accordion
-                      className="flex flex-col gap-2.5"
-                      defaultValue={["item-1"]}
-                    >
+                    <Accordion className="flex flex-col gap-2.5">
                       <AccordionItem
                         className="overflow-hidden group rounded-xl border border-border/50 bg-background transition-colors duration-200"
                         value="item-1"

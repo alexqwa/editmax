@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
-import { cn } from "@/lib/utils";
+
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
 const fontSans = DM_Sans({
   subsets: ["latin"],
@@ -24,7 +25,11 @@ export default function RootLayout({
       lang="en"
       className={cn("font-sans scroll-smooth", fontSans.variable)}
     >
-      <body className={`${fontSans.variable} antialiased`}>{children}</body>
+      <body
+        className={`${fontSans.variable} min-h-screen bg-background text-foreground antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

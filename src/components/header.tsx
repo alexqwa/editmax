@@ -15,10 +15,6 @@ import logoImg from "@/src/assets/logo.svg";
 
 const navItems: { title: string; href: string }[] = [
   {
-    title: "Funcionalidades",
-    href: "/",
-  },
-  {
     title: "Preços",
     href: "/#pricing",
   },
@@ -28,7 +24,7 @@ const navItems: { title: string; href: string }[] = [
   },
   {
     title: "Plataforma",
-    href: "/",
+    href: "/auth",
   },
 ];
 
@@ -99,7 +95,7 @@ export function Header() {
           </NavigationMenu>
           <div className="ml-auto flex shrink-0 items-center gap-2.5">
             <Link
-              href="/"
+              href="/auth"
               className="hidden h-9 items-center justify-center rounded-lg border border-border/60 bg-white px-3.5 text-[13px] font-medium text-foreground transition-all duration-200 hover:bg-muted/50 active:scale-[0.99] active:transition-none sm:inline-flex"
             >
               Acessar Dashboard
@@ -171,7 +167,7 @@ export function Header() {
             </div>
           </div>
           <Link
-            href="/"
+            href="/auth"
             className="flex h-11 w-full items-center justify-center rounded-lg border border-border/60 text-[13.5px] font-medium text-muted-foreground transition-colors duration-150 hover:bg-[#F2F4F8] hover:text-foreground"
           >
             Acessar Dashboard
