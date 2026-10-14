@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   LinkIcon,
-  PlusIcon,
   CaretLeftIcon,
   CaretRightIcon,
   ShieldCheckIcon,
@@ -13,14 +12,9 @@ import {
 
 import { Header } from "@/src/components/header";
 import { PlanCard } from "@/src/components/plan-card";
+import { FaqAccordion } from "@/src/components/faq-accordion";
 import { AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionContent,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 import logoImg from "@/src/assets/logo.svg";
 import mockupImg from "@/public/mockup_4x.png";
@@ -103,6 +97,34 @@ const plans = [
       ],
     },
     planMostPopular: false,
+  },
+];
+
+const faqs = [
+  {
+    title: "É realmente ilimitado?",
+    subtitle:
+      "Sim. Nesta condição, não há limite de quantidade de vídeos por dia ou por mês e as exportações não descontam créditos. É necessário manter a assinatura ativa.",
+  },
+  {
+    title: "Os planos renovam automaticamente?",
+    subtitle:
+      "Sim. Apenas os planos Starter e Publisher possuem renovação automática. Nesses planos, a cobrança é realizada mensalmente, de forma automática, utilizando o mesmo meio de pagamento informado no momento da assinatura. Todos os valores, condições e informações sobre a cobrança são apresentados de forma clara antes da confirmação do pagamento.",
+  },
+  {
+    title: "Posso editar mais de 500 vídeos por dia?",
+    subtitle:
+      "Sim. O plano permite esse volume de processamento, sem um limite diário fixo. O processamento dos vídeos é realizado diretamente pela plataforma, pela web, sem depender da potência do computador do usuário. O tempo de processamento pode variar de acordo com a quantidade, duração, resolução e complexidade dos vídeos, além dos efeitos e recursos utilizados. Por isso, não há um prazo fixo de processamento aplicável a todos os casos.",
+  },
+  {
+    title: "Preciso saber editar? As legendas são automáticas?",
+    subtitle:
+      "Você ajusta o visual e aplica aos vídeos selecionados. O treinamento ajuda nos primeiros passos. As frases e legendas de texto desta versão são escritas por você, com controle de fonte, tamanho e posição. Esta oferta não inclui transcrição automática de fala nem o módulo de clipagem de vídeos longos.",
+  },
+  {
+    title: "O que acontece se eu cancelar?",
+    subtitle:
+      "Você pode cancelar a renovação. O acesso e o uso ilimitado dependem da validade da assinatura: quando o acesso expira ou é revogado por cancelamento ou reembolso, o sistema deixa de liberar novas exportações. Os vídeos já exportados continuam no seu computador.",
   },
 ];
 
@@ -330,7 +352,7 @@ export default function Home() {
                     </p>
                     <div className="mt-auto flex items-center justify-center gap-4 pt-10 lg:justify-start">
                       <Link
-                        href="/extensao"
+                        href="#editor"
                         className="group/link inline-flex items-center gap-2 text-[14px] font-medium text-[#052D2B] transition-colors duration-200 hover:text-[#052D2B]"
                       >
                         Abrir editor
@@ -341,7 +363,7 @@ export default function Home() {
                       </Link>
                       <span className="hidden size-1 rounded-full bg-[#D1D5DB] lg:block"></span>
                       <Link
-                        href="#feature-stories"
+                        href="#demo"
                         className="group/link hidden items-center gap-2 text-[14px] font-medium text-[#052D2B] transition-colors duration-200 hover:text-[#052D2B] lg:inline-flex"
                       >
                         Ver demonstração
@@ -591,152 +613,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="bg-white p-6 pt-16 pb-16 lg:p-8 lg:pt-16 lg:pb-16">
-                    <Accordion className="flex flex-col gap-2.5">
-                      <AccordionItem
-                        className="overflow-hidden group rounded-xl border border-border/50 bg-background transition-colors duration-200"
-                        value="item-1"
-                      >
-                        <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left">
-                          <span className="text-[17px] font-medium leading-[1.4] tracking-[-0.03em] text-foreground">
-                            É realmente ilimitado?
-                          </span>
-                          <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background text-muted-foreground">
-                            <PlusIcon
-                              size={24}
-                              className="size-3.5 transition-transform duration-300 group-data-open:rotate-45"
-                            />
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="grid transition-all data-starting-style:animate-accordion-down data-ending-style:animate-accordion-up duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] grid-rows-[1fr] opacity-100">
-                          <div className="overflow-hidden">
-                            <p className="px-6 pb-5 text-[14px] leading-[1.8] text-[#6B7280]">
-                              Sim. Nesta condição, não há limite de quantidade
-                              de vídeos por dia ou por mês e as exportações não
-                              descontam créditos. É necessário manter a
-                              assinatura ativa.
-                            </p>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem
-                        className="overflow-hidden group rounded-xl border border-border/50 bg-background transition-colors duration-200"
-                        value="item-2"
-                      >
-                        <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left">
-                          <span className="text-[17px] font-medium leading-[1.4] tracking-[-0.03em] text-foreground">
-                            Os planos renovam automaticamente?
-                          </span>
-                          <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background text-muted-foreground">
-                            <PlusIcon
-                              size={24}
-                              className="size-3.5 transition-transform duration-300 group-data-open:rotate-45"
-                            />
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="grid transition-all data-starting-style:animate-accordion-down data-ending-style:animate-accordion-up duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] grid-rows-[1fr] opacity-100">
-                          <div className="overflow-hidden">
-                            <p className="px-6 pb-5 text-[14px] leading-[1.8] text-[#6B7280]">
-                              Sim. Apenas os planos **Starter** e **Publisher**
-                              possuem renovação automática. Nesses planos, a
-                              cobrança é realizada mensalmente, de forma
-                              automática, utilizando o mesmo meio de pagamento
-                              informado no momento da assinatura. Todos os
-                              valores, condições e informações sobre a cobrança
-                              são apresentados de forma clara antes da
-                              confirmação do pagamento.
-                            </p>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem
-                        className="overflow-hidden group rounded-xl border border-border/50 bg-background transition-colors duration-200"
-                        value="item-3"
-                      >
-                        <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left">
-                          <span className="text-[17px] font-medium leading-[1.4] tracking-[-0.03em] text-foreground">
-                            Posso editar mais de 500 vídeos por dia?
-                          </span>
-                          <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background text-muted-foreground">
-                            <PlusIcon
-                              size={24}
-                              className="size-3.5 transition-transform duration-300 group-data-open:rotate-45"
-                            />
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="grid transition-all data-starting-style:animate-accordion-down data-ending-style:animate-accordion-up duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] grid-rows-[1fr] opacity-100">
-                          <div className="overflow-hidden">
-                            <p className="px-6 pb-5 text-[14px] leading-[1.8] text-[#6B7280]">
-                              Sim. O plano permite esse volume de processamento,
-                              sem um limite diário fixo. O processamento dos
-                              vídeos é realizado diretamente pela plataforma,
-                              pela web, sem depender da potência do computador
-                              do usuário. O tempo de processamento pode variar
-                              de acordo com a quantidade, duração, resolução e
-                              complexidade dos vídeos, além dos efeitos e
-                              recursos utilizados. Por isso, não há um prazo
-                              fixo de processamento aplicável a todos os casos.
-                            </p>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem
-                        className="overflow-hidden group rounded-xl border border-border/50 bg-background transition-colors duration-200"
-                        value="item-4"
-                      >
-                        <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left">
-                          <span className="text-[17px] font-medium leading-[1.4] tracking-[-0.03em] text-foreground">
-                            Preciso saber editar? As legendas são automáticas?
-                          </span>
-                          <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background text-muted-foreground">
-                            <PlusIcon
-                              size={24}
-                              className="size-3.5 transition-transform duration-300 group-data-open:rotate-45"
-                            />
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="grid transition-all data-starting-style:animate-accordion-down data-ending-style:animate-accordion-up duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] grid-rows-[1fr] opacity-100">
-                          <div className="overflow-hidden">
-                            <p className="px-6 pb-5 text-[14px] leading-[1.8] text-[#6B7280]">
-                              Você ajusta o visual e aplica aos vídeos
-                              selecionados. O treinamento ajuda nos primeiros
-                              passos. As frases e legendas de texto desta versão
-                              são escritas por você, com controle de fonte,
-                              tamanho e posição. Esta oferta não inclui
-                              transcrição automática de fala nem o módulo de
-                              clipagem de vídeos longos.
-                            </p>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                      <AccordionItem
-                        className="overflow-hidden group rounded-xl border border-border/50 bg-background transition-colors duration-200"
-                        value="item-5"
-                      >
-                        <AccordionTrigger className="flex w-full cursor-pointer items-center justify-between gap-4 px-6 py-5 text-left">
-                          <span className="text-[17px] font-medium leading-[1.4] tracking-[-0.03em] text-foreground">
-                            O que acontece se eu cancelar?
-                          </span>
-                          <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border/70 bg-background text-muted-foreground">
-                            <PlusIcon
-                              size={24}
-                              className="size-3.5 transition-transform duration-300 group-data-open:rotate-45"
-                            />
-                          </span>
-                        </AccordionTrigger>
-                        <AccordionContent className="grid transition-all data-starting-style:animate-accordion-down data-ending-style:animate-accordion-up duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] grid-rows-[1fr] opacity-100">
-                          <div className="overflow-hidden">
-                            <p className="px-6 pb-5 text-[14px] leading-[1.8] text-[#6B7280]">
-                              Você pode cancelar a renovação. O acesso e o uso
-                              ilimitado dependem da validade da assinatura:
-                              quando o acesso expira ou é revogado por
-                              cancelamento ou reembolso, o sistema deixa de
-                              liberar novas exportações. Os vídeos já exportados
-                              continuam no seu computador.
-                            </p>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
+                    <FaqAccordion data={faqs} />
                   </div>
                 </div>
               </div>

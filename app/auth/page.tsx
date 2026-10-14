@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
+
 import {
   EyeIcon,
   LockKeyIcon,
   LockKeyOpenIcon,
   EnvelopeSimpleIcon,
 } from "@phosphor-icons/react";
-import Link from "next/link";
 
 export default function Auth() {
   return (
