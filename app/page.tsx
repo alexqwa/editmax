@@ -10,14 +10,14 @@ import {
   ArrowUpRightIcon,
 } from "@phosphor-icons/react";
 
-import { Header } from "@/src/components/header";
-import { PlanCard } from "@/src/components/plan-card";
-import { FaqAccordion } from "@/src/components/faq-accordion";
+import { Header } from "@/components/header";
+import { PlanCard } from "@/components/plan-card";
+import { FaqAccordion } from "@/components/faq-accordion";
 import { AvatarGroup, AvatarGroupCount } from "@/components/ui/avatar";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
-import logoImg from "@/src/assets/logo.svg";
-import mockupImg from "@/public/mockup_4x.png";
+import logoImg from "@/assets/logo.svg";
+import mockupImg from "../public/mockup_4x.png";
 
 const plans = [
   {

@@ -23,7 +23,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("font-sans scroll-smooth", fontSans.variable)}
+      className={cn(
+        "font-sans scroll-smooth data-scroll-smooth",
+        fontSans.variable,
+      )}
     >
       <body
         className={`${fontSans.variable} min-h-screen bg-background text-foreground antialiased`}

@@ -11,7 +11,7 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 
-import logoImg from "@/src/assets/logo.svg";
+import logoImg from "@/assets/logo.svg";
 
 const navItems: { title: string; href: string }[] = [
   {
