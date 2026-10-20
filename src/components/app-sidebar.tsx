@@ -156,12 +156,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     ["translate-x-0.5"]: !open,
                   })}
                 >
-                  <span className="flex h-8.25 w-8.25 items-center justify-center overflow-hidden rounded-[8px] border border-border bg-foreground/4 transition-colors group-hover:bg-foreground/6">
+                  <span className="flex h-8.25 w-8.25 items-center justify-center overflow-hidden rounded-[calc(var(--radius)/2+4px)] border border-border bg-foreground/4 transition-colors group-hover:bg-foreground/6">
                     <Image
                       fill
                       src="https://github.com/alexqwa.png"
                       alt="Alexandre Ferreira"
-                      className="h-full w-full object-cover rounded-[8px]"
+                      className="h-full w-full object-cover rounded-[calc(var(--radius)/2+4px)]"
                     />
                   </span>
                   <span

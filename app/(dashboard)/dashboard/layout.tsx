@@ -61,7 +61,7 @@ export default function DashboardLayout({
               >
                 <ol
                   data-slot="breadcrumb-list"
-                  className="text-muted-foreground flex flex-wrap items-center gap-1.5 text-[14px] break-words sm:gap-2.5 min-w-0 flex-nowrap"
+                  className="text-muted-foreground flex flex-wrap items-center gap-1.5 text-[14px] wrap-break-word sm:gap-2.5 min-w-0"
                 >
                   <li
                     data-slot="breadcrumb-item"
@@ -128,7 +128,7 @@ export default function DashboardLayout({
                       role="link"
                       aria-disabled="true"
                       aria-current="page"
-                      className="text-foreground font-medium block max-w-[280px] truncate"
+                      className="text-foreground font-medium block max-w-70 truncate"
                       data-qa="breadcrumb-current"
                       title="Produtos"
                     >
@@ -145,7 +145,7 @@ export default function DashboardLayout({
               <button
                 type="button"
                 aria-label="Notificações"
-                className="relative inline-flex h-10 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[14px] font-medium text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 bg-transparent hover:bg-[#052D2B]/[0.04] hover:border-[#052D2B]/20 dark:border-border dark:hover:bg-foreground/[0.05] dark:hover:border-foreground/15 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:bg-transparent disabled:text-[#052D2B]/40 disabled:border-[#052D2B]/8 disabled:hover:bg-transparent disabled:hover:border-[#052D2B]/8 dark:disabled:text-foreground/40 dark:disabled:border-border/50 dark:disabled:hover:bg-transparent dark:disabled:hover:border-border/50"
+                className="relative inline-flex h-10 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[14px] font-medium text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 bg-transparent hover:bg-[#052D2B]/4 hover:border-[#052D2B]/20 dark:border-border dark:hover:bg-foreground/5 dark:hover:border-foreground/15 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:bg-transparent disabled:text-[#052D2B]/40 disabled:border-[#052D2B]/8 disabled:hover:bg-transparent disabled:hover:border-[#052D2B]/8 dark:disabled:text-foreground/40 dark:disabled:border-border/50 dark:disabled:hover:bg-transparent dark:disabled:hover:border-border/50"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ export default function DashboardLayout({
               <button
                 type="button"
                 aria-label="Ativar modo escuro"
-                className="relative inline-flex h-10 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[14px] font-medium text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 bg-transparent hover:bg-[#052D2B]/[0.04] hover:border-[#052D2B]/20 dark:border-border dark:hover:bg-foreground/[0.05] dark:hover:border-foreground/15 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:bg-transparent disabled:text-[#052D2B]/40 disabled:border-[#052D2B]/8 disabled:hover:bg-transparent disabled:hover:border-[#052D2B]/8 dark:disabled:text-foreground/40 dark:disabled:border-border/50 dark:disabled:hover:bg-transparent dark:disabled:hover:border-border/50"
+                className="relative inline-flex h-10 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[14px] font-medium text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 bg-transparent hover:bg-[#052D2B]/4 hover:border-[#052D2B]/20 dark:border-border dark:hover:bg-foreground/5 dark:hover:border-foreground/15 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:bg-transparent disabled:text-[#052D2B]/40 disabled:border-[#052D2B]/8 disabled:hover:bg-transparent disabled:hover:border-[#052D2B]/8 dark:disabled:text-foreground/40 dark:disabled:border-border/50 dark:disabled:hover:bg-transparent dark:disabled:hover:border-border/50"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,7 @@ export default function DashboardLayout({
               <button
                 type="button"
                 aria-label="Ajuda"
-                className="relative inline-flex h-10 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[14px] font-medium text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 bg-transparent hover:bg-[#052D2B]/[0.04] hover:border-[#052D2B]/20 dark:border-border dark:hover:bg-foreground/[0.05] dark:hover:border-foreground/15 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:bg-transparent disabled:text-[#052D2B]/40 disabled:border-[#052D2B]/8 disabled:hover:bg-transparent disabled:hover:border-[#052D2B]/8 dark:disabled:text-foreground/40 dark:disabled:border-border/50 dark:disabled:hover:bg-transparent dark:disabled:hover:border-border/50"
+                className="relative inline-flex h-10 items-center justify-center gap-1.5 rounded-[10px] px-3 text-[14px] font-medium text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 bg-transparent hover:bg-[#052D2B]/4 hover:border-[#052D2B]/20 dark:border-border dark:hover:bg-foreground/5 dark:hover:border-foreground/15 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:bg-transparent disabled:text-[#052D2B]/40 disabled:border-[#052D2B]/8 disabled:hover:bg-transparent disabled:hover:border-[#052D2B]/8 dark:disabled:text-foreground/40 dark:disabled:border-border/50 dark:disabled:hover:bg-transparent dark:disabled:hover:border-border/50"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ export default function DashboardLayout({
               ></span>
               <button
                 type="button"
-                className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-[#B1FE7B] text-[#052D2B] font-medium border-[0.5px] border-white/25 ring-1 [--btn-ring:color-mix(in_oklab,#052D2B_15%,#B1FE7B)] ring-[var(--btn-ring)] shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:bg-[#a0f060] enabled:active:scale-[0.99] h-9 gap-1.5 px-3 text-[14px] tracking-[-0.01em]"
+                className="inline-flex cursor-pointer items-center justify-center rounded-lg bg-[#B1FE7B] text-[#052D2B] font-medium border-[0.5px] border-white/25 ring-1 [--btn-ring:color-mix(in_oklab,#052D2B_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 enabled:hover:bg-[#a0f060] enabled:active:scale-[0.99] h-9 gap-1.5 px-3 text-[14px] tracking-[-0.01em]"
                 aria-label="Fazer upgrade pro Plano Pro"
               >
                 <svg

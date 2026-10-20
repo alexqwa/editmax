@@ -43,7 +43,7 @@ export function NavMain({ overview }: NavMainProps) {
                 <Link
                   href={item.url}
                   className={clsx(
-                    "relative flex pointer-events-none items-center overflow-hidden rounded-[10px] border border-transparent h-[36px] justify-start px-2 transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/40 w-[40px] bg-[#b1fe7b]/80 text-[#214d12] dark:bg-lime",
+                    "relative flex pointer-events-none items-center overflow-hidden rounded-[10px] border border-transparent h-9 justify-start px-2 transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/40 w-10 bg-[#b1fe7b]/80 text-[#214d12] dark:bg-lime",
                     {
                       ["w-full px-3"]: open,
                     },

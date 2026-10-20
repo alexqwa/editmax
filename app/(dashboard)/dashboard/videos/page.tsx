@@ -1,6 +1,6 @@
 export default function Videos() {
   return (
-    <div>
+    <div className="p-10">
       <h1>Videos</h1>
     </div>
   );
