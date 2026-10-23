@@ -170,7 +170,7 @@ function Sidebar({
       <div
         data-slot="sidebar"
         className={cn(
-          "flex flex-col border-r border-border bg-card transition-[width,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] relative h-full shrink-0 w-(--sidebar-width)",
+          "flex flex-col fixed border-r border-border bg-card transition-[width,transform] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] h-full shrink-0 w-(--sidebar-width)",
           className,
         )}
         {...props}
@@ -231,7 +231,7 @@ function Sidebar({
         data-slot="sidebar-container"
         data-side={side}
         className={cn(
-          "flex flex-col border-r border-border bg-card transition-[left,right,width] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] relative h-full shrink-0 w-(--sidebar-width) data-[side=left]:left-0 data-[side=left]:group-data-[collapsible=offcanvas]:-left-(--sidebar-width) data-[side=right]:right-0 data-[side=right]:group-data-[collapsible=offcanvas]:-right-(--sidebar-width)",
+          "flex flex-col border-r fixed border-border bg-card transition-[left,right,width] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] h-full shrink-0 w-(--sidebar-width) data-[side=left]:left-0 data-[side=left]:group-data-[collapsible=offcanvas]:-left-(--sidebar-width) data-[side=right]:right-0 data-[side=right]:group-data-[collapsible=offcanvas]:-right-(--sidebar-width)",
           // Adjust the padding for floating and inset variants.
           variant === "floating" || variant === "inset"
             ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]"

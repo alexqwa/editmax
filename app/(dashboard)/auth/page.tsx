@@ -64,7 +64,7 @@ export default function Auth() {
                                 placeholder="nome@exemplo.com"
                                 autoComplete="off"
                                 required
-                                className="w-full h-11 px-3.5 rounded-[8px] border text-[13px] text-foreground bg-transparent placeholder:text-muted-foreground/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-0 focus-visible:border-[#052D2B]/25 dark:focus-visible:border-border border-border/70 disabled:opacity-50 disabled:cursor-not-allowed font-sans tracking-[-0.2px] pl-10 pr-11"
+                                className="w-full h-11 px-3.5 rounded-[calc(var(--radius))+4px] border text-[13px] text-foreground bg-transparent placeholder:text-muted-foreground/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-0 focus-visible:border-[#052D2B]/25 dark:focus-visible:border-border border-border/70 disabled:opacity-50 disabled:cursor-not-allowed font-sans tracking-[-0.2px] pl-10 pr-11"
                                 type="email"
                               />
                             </div>
@@ -86,7 +86,7 @@ export default function Auth() {
                                 placeholder="• • • • • • • •"
                                 autoComplete="current-password"
                                 required
-                                className="w-full h-11 px-3.5 rounded-[8px] border text-[13px] text-foreground bg-transparent placeholder:text-muted-foreground/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-0 focus-visible:border-[#052D2B]/25 dark:focus-visible:border-border border-border/70 disabled:opacity-50 disabled:cursor-not-allowed font-sans tracking-[-0.2px] pl-10 pr-11"
+                                className="w-full h-11 px-3.5 rounded-[calc(var(--radius))+4px] border text-[13px] text-foreground bg-transparent placeholder:text-muted-foreground/40 transition-all duration-200 focus-visible:outline-none focus-visible:ring-0 focus-visible:border-[#052D2B]/25 dark:focus-visible:border-border border-border/70 disabled:opacity-50 disabled:cursor-not-allowed font-sans tracking-[-0.2px] pl-10 pr-11"
                                 type="password"
                               />
                               <button
@@ -106,10 +106,10 @@ export default function Auth() {
                               </button>
                             </div>
                           </div>
-                          <button
-                            type="submit"
+                          <Link
+                            href="/dashboard/onboarding"
                             data-qa="auth-submit"
-                            className="group w-full mt-1 inline-flex h-11 items-center justify-center gap-2 rounded-[8px] bg-[#B1FE7B] px-6 font-sans text-[15px] font-semibold text-[#052D2B] tracking-[-0.4px] border-[0.5px] border-white/25 ring-1 [--btn-ring:color-mix(in_oklab,#052D2B_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] transition-all duration-300 enabled:hover:bg-[#a0f060] enabled:active:scale-[0.99] enabled:active:transition-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                            className="group w-full mt-1 inline-flex h-11 items-center justify-center gap-2 rounded-[calc(var(--radius))+4px] bg-[#B1FE7B] px-6 font-sans text-[15px] font-semibold text-[#052D2B] tracking-[-0.4px] border-[0.5px] border-white/25 ring-1 [--btn-ring:color-mix(in_oklab,#052D2B_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] transition-all duration-300 enabled:hover:bg-[#a0f060] enabled:active:scale-[0.99] enabled:active:transition-none disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                           >
                             <span>Entrar</span>
                             <span className="inline-flex w-0 overflow-hidden opacity-0 transition-all duration-300 group-enabled:group-hover:w-4 group-enabled:group-hover:opacity-100">
@@ -119,7 +119,7 @@ export default function Auth() {
                                 className="shrink-0"
                               />
                             </span>
-                          </button>
+                          </Link>
                         </fieldset>
                         <div className="relative text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-border after:border-t">
                           <span className="relative z-10 rounded-full border border-border bg-background px-2.5 py-0.5 text-muted-foreground text-xs font-medium font-eudoxus">
@@ -128,7 +128,7 @@ export default function Auth() {
                         </div>
                         <button
                           type="button"
-                          className="w-full h-11 px-6 rounded-[8px] font-sans text-[14px] font-medium tracking-[-0.3px] inline-flex items-center justify-center gap-2.5 bg-transparent text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 dark:border-border hover:bg-[#052D2B]/3 hover:border-[#052D2B]/20 dark:hover:bg-muted/20 active:scale-[0.99] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B1FE7B]/50 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
+                          className="w-full h-11 px-6 rounded-[calc(var(--radius))+4px] font-sans text-[14px] font-medium tracking-[-0.3px] inline-flex items-center justify-center gap-2.5 bg-transparent text-[#052D2B] dark:text-foreground border border-[#052D2B]/12 dark:border-border hover:bg-[#052D2B]/3 hover:border-[#052D2B]/20 dark:hover:bg-muted/20 active:scale-[0.99] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B1FE7B]/50 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
                         >
                           <svg
                             width="18"
@@ -157,7 +157,7 @@ export default function Auth() {
                           Continuar com Google
                         </button>
                         <p className="text-center text-[13px] text-[#52525A] dark:text-muted-foreground font-eudoxus tracking-[-0.2px]">
-                          Não tem cadastro?{" "}
+                          Não tem cadastro?&nbsp;
                           <button
                             type="button"
                             className="font-medium text-[#052D2B] dark:text-foreground underline-offset-2 hover:underline cursor-pointer"
@@ -166,14 +166,14 @@ export default function Auth() {
                           </button>
                         </p>
                         <p className="text-center text-[11px] text-muted-foreground leading-relaxed font-eudoxus">
-                          Ao continuar, você concorda com os{" "}
+                          Ao continuar, você concorda com os&nbsp;
                           <Link
                             href="/termos"
                             className="underline hover:text-foreground transition-colors"
                           >
                             Termos
-                          </Link>{" "}
-                          e a{" "}
+                          </Link>
+                          &nbsp; e a&nbsp;
                           <Link
                             href="/privacidade"
                             className="underline hover:text-foreground transition-colors"

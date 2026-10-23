@@ -59,11 +59,6 @@ const data = {
       pro: true,
     },
     {
-      name: "Métricas",
-      url: "/dashboard/statistics",
-      icon: ChartLineUpIcon,
-    },
-    {
       name: "Configurações",
       url: "/dashboard/settings",
       icon: GearSixIcon,
@@ -162,10 +157,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 <span
                   className={cn(
                     "flex items-center justify-center",
-                    open && "rotate-180",
+                    !open && "rotate-180",
                   )}
                 >
-                  <CaretLeftIcon size={20} />
+                  <CaretLeftIcon size={19} />
                 </span>
                 {open && (
                   <span className="ml-2.5 whitespace-nowrap text-[14px] font-medium leading-none">

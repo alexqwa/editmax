@@ -14,7 +14,7 @@ export default function DashboardLayout({
       <AppSidebar />
       <div className="flex min-w-0 flex-1 flex-col">
         <NavHeader />
-        {children}
+        <div className="min-h-0 flex-1 overflow-auto">{children}</div>
       </div>
     </SidebarProvider>
   );
