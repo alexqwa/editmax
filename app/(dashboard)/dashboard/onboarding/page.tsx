@@ -21,9 +21,10 @@ export default function Onboarding() {
         >
           <p className="text-[14px] leading-snug">
             <strong className="font-medium">
-              Vá além de somente edição de vídeos.
+              Seu conteúdo não termina na edição.
             </strong>
-            &nbsp;No Publisher você agenda e publica tudo de forma automática.
+            &nbsp;Com o Publisher, transforme vídeos em publicações prontas para
+            todas as plataformas.
           </p>
           <button
             type="button"
@@ -60,7 +61,7 @@ export default function Onboarding() {
             <div
               aria-hidden="true"
               className="landing-cta-bg pointer-events-none absolute inset-0 opacity-80"
-            ></div>
+            />
             <div className="relative flex h-full flex-col justify-center px-6 py-5 sm:px-10 sm:py-7 lg:px-12 lg:py-8">
               <div className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[#1E4345]/18 py-1 pl-2 pr-2.5">
                 <LockIcon size={12} className="text-[#1E4345]" />

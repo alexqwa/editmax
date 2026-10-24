@@ -13,9 +13,10 @@ export default function Dashboard() {
         >
           <p className="text-[14px] leading-snug">
             <strong className="font-medium">
-              Vá além de somente edição de vídeos.
+              Seu conteúdo não termina na edição.
             </strong>
-            &nbsp;No Publisher você agenda e publica tudo de forma automática.
+            &nbsp;Com o Publisher, transforme vídeos em publicações prontas para
+            todas as plataformas.
           </p>
           <button
             type="button"
