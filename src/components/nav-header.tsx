@@ -46,7 +46,7 @@ export function NavHeader() {
   const { isMobile } = useSidebar();
 
   return (
-    <div className="sticky top-0 z-30 h-15 border-b border-border bg-background/90 backdrop-blur-md">
+    <div className="sticky top-0 z-30 h-15 border-b border-border bg-background">
       <div className="mx-auto flex h-full items-center justify-between pl-3 pr-4">
         <div className="flex min-w-0 items-center gap-2">
           <SidebarTrigger variant={"outline"} />

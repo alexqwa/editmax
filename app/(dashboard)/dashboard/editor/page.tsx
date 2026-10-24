@@ -1,11 +1,14 @@
 "use client";
 
+import { Slider } from "@/components/ui/slider";
 import {
   TrashIcon,
   ArrowUpRightIcon,
   UploadSimpleIcon,
   FileArrowDownIcon,
   DownloadSimpleIcon,
+  ImageIcon,
+  GearSixIcon,
 } from "@phosphor-icons/react";
 
 export default function Editor() {
@@ -51,9 +54,9 @@ export default function Editor() {
         </div>
       </header>
       <div aria-hidden="true" className="h-px w-full bg-border" />
-      <div className="@container/onboarding-row px-8 py-8">
-        <div className="grid items-strech gap-3 grid-cols-2 @[1080px]/onboarding-row:grid-cols-[360px_minmax(0,1fr)_360px]">
-          <div className="flex h-full w-full col-span-2 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
+      <div className="@container/editor-row px-8 py-8">
+        <div className="grid items-strech gap-3 grid-cols-1 sm:grid-cols-2 @[1080px]/editor-row:grid-cols-[360px_minmax(0,1fr)_360px]">
+          <div className="flex h-full w-full col-span-2 @[1080px]/editor-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
             <div className="flex flex-row items-center justify-between">
               <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
                 Envie seus vídeos
@@ -76,7 +79,7 @@ export default function Editor() {
               </div>
             </div>
             <div className="flex flex-col gap-1.5">
-              {Array.from({ length: 3 }).map((item, i) => (
+              {Array.from({ length: 4 }).map((item, i) => (
                 <div
                   key={i}
                   className="w-full px-2 py-2 rounded-[10px] border border-border flex items-center"
@@ -103,13 +106,123 @@ export default function Editor() {
               ))}
             </div>
           </div>
-          <div className="relative flex h-full flex-col overflow-hidden rounded-lg bg-[#9EEA6C] col-span-2 @[1080px]/onboarding-row:col-span-1">
-            <div
-              aria-hidden="true"
-              className="landing-cta-bg pointer-events-none absolute inset-0 opacity-80"
-            />
+          <div className="relative flex flex-col overflow-hidden rounded-lg bg-card border border-border gap-4 col-span-2 @[1080px]/editor-row:col-span-1 p-5 py-4">
+            <div className="flex flex-row items-center justify-between">
+              <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
+                Preview do vídeo
+              </h4>
+              <div className="rounded-[8.1px] border border-border p-1">
+                <ImageIcon className="size-3.5 text-muted-foreground" />
+              </div>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-4">
+              <div className="w-full sm:w-85 flex-col bg-card border border-border rounded-lg gap-4"></div>
+              <div className="flex flex-1 flex-col bg-card border border-border rounded-lg gap-4 p-5 py-4">
+                <div className="flex flex-row items-center justify-between">
+                  <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
+                    Ajustes
+                  </h4>
+                  <div className="rounded-[8.1px] border border-border p-1">
+                    <GearSixIcon className="size-3.5 text-muted-foreground" />
+                  </div>
+                </div>
+                <div className="relative border-border border-b">
+                  <div className="px-8">
+                    <div className="relative flex gap-2">
+                      <button
+                        type="button"
+                        aria-pressed="true"
+                        className="relative z-10 cursor-pointer rounded-[8.1px] font-medium tracking-[-0.01em] transition-colors duration-200 px-3 pt-2 pb-3.5 text-[16px] text-[#052D2B] dark:text-foreground"
+                      >
+                        <span className="inline-flex items-center gap-1.5">
+                          Visão geral
+                        </span>
+                      </button>
+                      <button
+                        type="button"
+                        aria-pressed="false"
+                        className="relative z-10 cursor-pointer rounded-[8.1px] font-medium tracking-[-0.01em] transition-colors duration-200 px-3 pt-2 pb-3.5 text-[16px] text-muted-foreground hover:text-[#052D2B] dark:hover:text-foreground"
+                      >
+                        <span className="inline-flex items-center gap-1.5">
+                          Pedidos ao vivo
+                          <span
+                            className="relative flex size-2"
+                            aria-hidden="true"
+                          >
+                            <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#EF4444] opacity-75"></span>
+                            <span className="relative inline-flex size-2 rounded-full bg-[#EF4444]"></span>
+                          </span>
+                        </span>
+                      </button>
+                      <span
+                        aria-hidden="true"
+                        className="pointer-events-none absolute top-1 bottom-2 rounded-[8.1px] bg-[#9EEA6C]/25 transition-all duration-200 ease-out dark:bg-[#9EEA6C]/15 left-[108px] w-[148px] opacity-0"
+                      />
+                      <span
+                        aria-hidden="true"
+                        className="cg-tab-underline absolute -bottom-px left-0 h-[2px] w-px rounded-full bg-[#9EEA6C] translate-x-0 scale-x-[101px] origin-[0px_50%]"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between gap-4 rounded-[8.1px] px-4 py-3 min-h-13 bg-[#DFFCCB] text-[#052D2B] dark:bg-[#B1FE7B]/10 dark:text-foreground">
+                  <p className="text-[14px] leading-snug">
+                    Aqui você remove as bordas superior e inferior do vídeo
+                    original (marcas d&#39;água, legendas, logos). As linhas
+                    tracejadas no preview mostram exatamente onde será o corte.
+                  </p>
+                </div>
+                <div className="relative flex gap-1 rounded-lg bg-[#052D2B]/6 p-1">
+                  <div className="pointer-events-none absolute inset-y-1 left-1 rounded-md bg-white transition-transform duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1)] w-[calc(50%-6px)] translate-x-[calc(0%+0px)]" />
+                  <button
+                    type="button"
+                    className="cursor-pointer relative z-10 flex-1 rounded-md px-4 py-2 text-[13px] font-medium transition-colors duration-300 text-[#052D2B]"
+                  >
+                    Manual
+                  </button>
+                  <button
+                    type="button"
+                    className="cursor-pointer relative z-10 flex-1 rounded-md px-4 py-2 text-[13px] transition-colors duration-300 text-muted-foreground/55 hover:text-muted-foreground"
+                  >
+                    Automático
+                  </button>
+                </div>
+                <button className="inline-flex cursor-pointer h-12 w-full items-center justify-center rounded-lg border border-border/60 bg-white px-6 text-[15px] font-medium text-foreground transition-all duration-200 hover:bg-muted/50 active:scale-[0.99] active:transition-none sm:w-auto">
+                  Detectar automáticamente
+                </button>
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-row items-center justify-between">
+                    <span className="text-[13px] font-medium">Topo</span>
+                    <span className="text-[13px] text-muted-foreground">
+                      12,5%
+                    </span>
+                  </div>
+                  <Slider max={100} step={1} className="w-full" />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="flex flex-row items-center justify-between">
+                    <span className="text-[13px] font-medium">Inferior</span>
+                    <span className="text-[13px] text-muted-foreground">
+                      12,5%
+                    </span>
+                  </div>
+                  <Slider max={100} step={1} className="w-full" />
+                </div>
+              </div>
+            </div>
+            <div className="w-full flex items-center justify-evenly gap-3 border border-border p-5 py-4 rounded-lg">
+              <button
+                type="button"
+                data-qa="pro-banner-cta"
+                className="group/cta inline-flex h-7 shrink-0 cursor-pointer items-center justify-center rounded-[6px] px-3 text-[12px] font-medium tracking-[-0.2px] bg-[#B1FE7B] text-[#052D2B] border-[0.5px] border-white/25 ring-1 [--btn-ring:color-mix(in_oklab,#052D2B_30%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] transition-colors duration-200 ease-out hover:bg-[#a0f060] active:scale-[0.99]"
+              >
+                Play
+              </button>
+              <Slider max={100} step={1} className="w-full" />
+              <span className="text-[13px] text-muted-foreground">0:42</span>
+            </div>
           </div>
-          <div className="flex w-full h-fit flex-col col-span-2 @[1080px]/onboarding-row:col-span-1 justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
+          <div className="flex w-full h-fit flex-col col-span-2 @[1080px]/editor-row:col-span-1 justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
             <div className="flex flex-row items-center justify-between">
               <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
                 Exportar vídeos

@@ -56,7 +56,7 @@ export default function Onboarding() {
       </header>
       <div aria-hidden="true" className="h-px w-full bg-border" />
       <section className="@container/onboarding-row px-8 py-8">
-        <div className="grid items-stretch gap-3 grid-cols-2 @[1080px]/onboarding-row:grid-cols-[minmax(0,1fr)_320px_320px]">
+        <div className="grid items-stretch gap-3 grid-cols-1 sm:grid-cols-2 @[1080px]/onboarding-row:grid-cols-[minmax(0,1fr)_320px_320px]">
           <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-[#9EEA6C] col-span-2 @[1080px]/onboarding-row:col-span-1">
             <div
               aria-hidden="true"
@@ -76,7 +76,7 @@ export default function Onboarding() {
               </h2>
               <p className="mt-2 max-w-md text-[13px] leading-normal font-medium text-[#1E4345]/70 sm:mt-3 sm:text-[14px] sm:leading-[1.55] lg:text-[15px]">
                 <span className="sm:hidden">
-                  Indique quem ainda edita vídeos manualmente. O&nbsp;Cargoos
+                  Indique quem ainda edita vídeos manualmente. O&nbsp;Editmax
                   melhora com mais gente.
                 </span>
                 <span className="hidden sm:inline">
@@ -86,7 +86,7 @@ export default function Onboarding() {
               </p>
             </div>
           </div>
-          <div className="flex h-full w-full col-span-2 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
+          <div className="flex h-full w-full col-span-2 sm:col-span-1 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
             <div className="flex flex-row items-center justify-between">
               <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
                 Seu código de convite
@@ -122,7 +122,7 @@ export default function Onboarding() {
               </div>
             </div>
           </div>
-          <div className="flex h-full w-full col-span-2 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
+          <div className="flex h-full w-full col-span-2 sm:col-span-1 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
             <div className="flex flex-row items-center justify-between">
               <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
                 Sua rede de convidados
@@ -161,8 +161,8 @@ export default function Onboarding() {
         </div>
       </section>
       <div aria-hidden="true" className="h-px w-full bg-border" />
-      <section className="relative px-8 pb-12 pt-9">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch">
+      <section className="relative px-8 pb-12 pt-9 @container/onboarding-steps">
+        <div className="flex flex-col gap-8 @[1080px]/onboarding-steps:flex-row @[1080px]/onboarding-steps:items-stretch">
           <div className="min-w-0 flex-1">
             <div className="flex h-full flex-col rounded-[12px] border border-border bg-card">
               <div className="h-[53.5px] rounded-t-[12px] border-b border-border px-3 flex items-center">
@@ -332,13 +332,13 @@ export default function Onboarding() {
           </div>
           <div
             aria-hidden="true"
-            className="absolute bottom-0 top-0 hidden w-px lg:block right-117"
+            className="absolute bottom-0 top-0 hidden w-px @[1080px]/onboarding-steps:block right-117"
             style={{
               background:
                 "linear-gradient(to bottom, var(--border) 0%, var(--border) 65%, transparent 100%)",
             }}
-          ></div>
-          <div className="lg:w-105">
+          />
+          <div className="w-full @[1080px]/onboarding-steps:w-105">
             <div className="flex h-full flex-col overflow-hidden rounded-[12px] border border-border bg-card">
               <div className="relative z-10 flex h-[53.5px] items-center justify-between gap-3 rounded-t-[12px] border-b border-border bg-card px-3">
                 <div className="flex items-center gap-3">
