@@ -217,6 +217,16 @@
     }
   }
 
+  @keyframes landing-cta-slide {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 1024px 256px;
+    }
+  }
+
   @keyframes shiny-slide {
     0% {
       transform: translate(-200%) rotate(-45deg);
@@ -246,6 +256,13 @@
   .shiny-btn {
     position: relative;
     overflow: hidden;
+  }
+
+  .landing-cta-bg {
+    background-image: url(https://framerusercontent.com/images/Wsriy0xvJ0zznEBRPhAAGpCQwRw.png?scale-down-to=1024);
+    background-repeat: repeat;
+    background-size: 1024px;
+    animation: landing-cta-slide 40s linear infinite;
   }
 
   .shiny-btn:before {
