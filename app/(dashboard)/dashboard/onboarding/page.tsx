@@ -5,43 +5,17 @@ import {
   LockIcon,
   CheckIcon,
   ListChecksIcon,
-  ArrowUpRightIcon,
   WarningCircleIcon,
   ArrowsClockwiseIcon,
 } from "@phosphor-icons/react";
 
+import { ProBanner } from "@/components/pro-banner";
+
 export default function Onboarding() {
   return (
     <div className="min-h-full bg-background text-foreground">
-      <div className="px-8 pt-6">
-        <div
-          role="status"
-          data-qa="pro-banner"
-          className="flex items-center justify-between gap-4 rounded-[8.1px] px-4 py-3 min-h-13 bg-[#DFFCCB] text-[#052D2B] dark:bg-[#B1FE7B]/10 dark:text-foreground"
-        >
-          <p className="text-[14px] leading-snug">
-            <strong className="font-medium">
-              Seu conteúdo não termina na edição.
-            </strong>
-            &nbsp;Com o Publisher, transforme vídeos em publicações prontas para
-            todas as plataformas.
-          </p>
-          <button
-            type="button"
-            data-qa="pro-banner-cta"
-            className="group/cta inline-flex h-7 shrink-0 cursor-pointer items-center justify-center rounded-[6px] px-3 text-[12px] font-medium tracking-[-0.2px] bg-[#B1FE7B] text-[#052D2B] border-[0.5px] border-white/25 ring-1 [--btn-ring:color-mix(in_oklab,#052D2B_30%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] transition-colors duration-200 ease-out hover:bg-[#a0f060] active:scale-[0.99]"
-          >
-            Assinar Publisher
-            <span
-              aria-hidden="true"
-              className="ml-0 inline-flex max-w-0 items-center overflow-hidden opacity-0 transition-[max-width,margin-left,opacity] duration-200 ease-out group-hover/cta:ml-1.5 group-hover/cta:max-w-3.5 group-hover/cta:opacity-100"
-            >
-              <ArrowUpRightIcon size={12} />
-            </span>
-          </button>
-        </div>
-      </div>
-      <header className="flex flex-col gap-4 px-8 pb-9 pt-10 sm:flex-row sm:items-center sm:justify-between">
+      <ProBanner />
+      <div className="flex flex-col gap-4 px-8 pb-9 pt-10 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
           <h1 className="text-[36px] font-medium leading-[1.1] tracking-[-0.03em] text-[#052D2B] dark:text-foreground">
             <span className="sm:hidden">Bem-vindo, Alexandre.</span>
@@ -53,10 +27,10 @@ export default function Onboarding() {
             Quatro passos para você começar a utilizar o Editmax.
           </p>
         </div>
-      </header>
+      </div>
       <div aria-hidden="true" className="h-px w-full bg-border" />
       <section className="@container/onboarding-row px-8 py-8">
-        <div className="grid items-stretch gap-3 grid-cols-2 @[1080px]/onboarding-row:grid-cols-[minmax(0,1fr)_320px_320px]">
+        <div className="grid items-stretch gap-3 grid-cols-1 sm:grid-cols-2 @[1080px]/onboarding-row:grid-cols-[minmax(0,1fr)_320px_320px]">
           <div className="relative flex h-full flex-col overflow-hidden rounded-2xl bg-[#9EEA6C] col-span-2 @[1080px]/onboarding-row:col-span-1">
             <div
               aria-hidden="true"
@@ -76,7 +50,7 @@ export default function Onboarding() {
               </h2>
               <p className="mt-2 max-w-md text-[13px] leading-normal font-medium text-[#1E4345]/70 sm:mt-3 sm:text-[14px] sm:leading-[1.55] lg:text-[15px]">
                 <span className="sm:hidden">
-                  Indique quem ainda edita vídeos manualmente. O&nbsp;Cargoos
+                  Indique quem ainda edita vídeos manualmente. O&nbsp;Editmax
                   melhora com mais gente.
                 </span>
                 <span className="hidden sm:inline">
@@ -86,7 +60,7 @@ export default function Onboarding() {
               </p>
             </div>
           </div>
-          <div className="flex h-full w-full col-span-2 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
+          <div className="flex h-full w-full col-span-2 sm:col-span-1 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
             <div className="flex flex-row items-center justify-between">
               <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
                 Seu código de convite
@@ -122,7 +96,7 @@ export default function Onboarding() {
               </div>
             </div>
           </div>
-          <div className="flex h-full w-full col-span-2 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
+          <div className="flex h-full w-full col-span-2 sm:col-span-1 @[1080px]/onboarding-row:col-span-1 flex-col justify-between gap-4 rounded-lg border border-border bg-card p-5 py-4">
             <div className="flex flex-row items-center justify-between">
               <h4 className="text-[15px] font-medium tracking-[-0.01em] text-foreground">
                 Sua rede de convidados
@@ -161,8 +135,8 @@ export default function Onboarding() {
         </div>
       </section>
       <div aria-hidden="true" className="h-px w-full bg-border" />
-      <section className="relative px-8 pb-12 pt-9">
-        <div className="flex flex-col gap-8 lg:flex-row lg:items-stretch">
+      <section className="relative px-8 pb-12 pt-9 @container/onboarding-steps">
+        <div className="flex flex-col gap-8 @[1080px]/onboarding-steps:flex-row @[1080px]/onboarding-steps:items-stretch">
           <div className="min-w-0 flex-1">
             <div className="flex h-full flex-col rounded-[12px] border border-border bg-card">
               <div className="h-[53.5px] rounded-t-[12px] border-b border-border px-3 flex items-center">
@@ -332,13 +306,13 @@ export default function Onboarding() {
           </div>
           <div
             aria-hidden="true"
-            className="absolute bottom-0 top-0 hidden w-px lg:block right-117"
+            className="absolute bottom-0 top-0 hidden w-px @[1080px]/onboarding-steps:block right-117"
             style={{
               background:
                 "linear-gradient(to bottom, var(--border) 0%, var(--border) 65%, transparent 100%)",
             }}
-          ></div>
-          <div className="lg:w-105">
+          />
+          <div className="w-full @[1080px]/onboarding-steps:w-105">
             <div className="flex h-full flex-col overflow-hidden rounded-[12px] border border-border bg-card">
               <div className="relative z-10 flex h-[53.5px] items-center justify-between gap-3 rounded-t-[12px] border-b border-border bg-card px-3">
                 <div className="flex items-center gap-3">
