@@ -23,13 +23,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={cn(
-        "font-sans scroll-smooth data-scroll-smooth",
+        "scroll-smooth font-sans",
         fontSans.variable,
       )}
     >
       <body
-        className={`${fontSans.variable} min-h-screen bg-background text-foreground antialiased`}
+        className={`${fontSans.variable} bg-background text-foreground min-h-screen antialiased`}
       >
         {children}
       </body>

@@ -77,13 +77,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           href="/dashboard"
           className="flex w-full cursor-pointer items-center"
         >
-          <div className="relative h-7.75 overflow-hidden scale-120 origin-left translate-x-[-1.35px] translate-y-[-1.26px] transition-[width] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] w-42">
+          <div className="relative h-7.75 w-42 origin-left translate-x-[-1.35px] translate-y-[-1.26px] scale-120 overflow-hidden transition-[width] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]">
             <Image
               src={logoImg}
               height={549}
               width={2253}
               alt="EditMax"
-              className="h-7.75 w-42 max-w-none object-left object-contain dark:hidden"
+              className="h-7.75 w-42 max-w-none object-contain object-left dark:hidden"
             />
           </div>
         </Link>
@@ -92,15 +92,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain playground={data.playground} overview={data.overview} />
       </SidebarContent>
       <SidebarFooter>
-        <div className="shrink-0 border-t border-border py-1.75">
+        <div className="border-border shrink-0 border-t py-1.75">
           <div className="px-[10.5px]">
             <div className="relative">
               <button
                 className={cn(
-                  "group flex items-center rounded-[12px] justify-center cursor-pointer text-foreground transition-all duration-150 ease-out hover:bg-accent/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/40",
+                  "group text-foreground hover:bg-accent/50 focus-visible:ring-lime/40 flex cursor-pointer items-center justify-center rounded-[12px] transition-all duration-150 ease-out focus-visible:ring-2 focus-visible:outline-none",
                   open
                     ? "min-h-14 w-full px-2 py-2 active:scale-[0.98]"
-                    : "h-10.5 -mx-1 w-10.5 translate-x-px",
+                    : "-mx-1 h-10.5 w-10.5 translate-x-px",
                 )}
               >
                 <span
@@ -109,30 +109,30 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     !open && "translate-x-0.5",
                   )}
                 >
-                  <span className="flex h-8.25 w-8.25 items-center justify-center overflow-hidden rounded-[calc(var(--radius)/2+4px)] border border-border bg-foreground/4 transition-colors group-hover:bg-foreground/6">
+                  <span className="border-border bg-foreground/4 group-hover:bg-foreground/6 relative flex h-8.25 w-8.25 items-center justify-center overflow-hidden rounded-[calc(var(--radius)/2+4px)] border transition-colors">
                     <Image
                       fill
                       src="https://github.com/alexqwa.png"
                       alt="Alexandre Ferreira"
-                      className="h-full w-full object-cover rounded-[calc(var(--radius)/2+4px)]"
+                      className="h-full w-full rounded-[calc(var(--radius)/2+4px)] object-cover"
                     />
                   </span>
                   <span
                     aria-hidden="true"
-                    className="absolute -bottom-0.5 -right-0.5 size-[10.5px] rounded-full bg-[#22C55E] ring-2 ring-card"
+                    className="ring-card absolute -right-0.5 -bottom-0.5 size-[10.5px] rounded-full bg-[#22C55E] ring-2"
                   />
                 </span>
                 {open && (
                   <span className="ml-3 flex min-w-0 flex-1 flex-col gap-0.5 text-left">
                     <span className="flex items-center gap-1.5">
-                      <span className="min-w-0 truncate text-[14px] font-medium leading-tight text-foreground">
+                      <span className="text-foreground min-w-0 truncate text-[14px] leading-tight font-medium">
                         Alexandre Ferreira
                       </span>
-                      <span className="inline-flex shrink-0 items-center rounded-[4.1px] px-1.75 py-1 text-[10px] font-semibold uppercase tracking-wide leading-none bg-[#B1FE7B] text-[#052D2B] dark:bg-[#B1FE7B]/15 dark:text-[#B1FE7B]">
+                      <span className="inline-flex shrink-0 items-center rounded-[4.1px] bg-[#B1FE7B] px-1.75 py-1 text-[10px] leading-none font-semibold tracking-wide text-[#052D2B] uppercase dark:bg-[#B1FE7B]/15 dark:text-[#B1FE7B]">
                         Free
                       </span>
                     </span>
-                    <span className="truncate text-[12px] leading-tight text-[#5C5C5C] dark:text-muted-foreground">
+                    <span className="dark:text-muted-foreground truncate text-[12px] leading-tight text-[#5C5C5C]">
                       ale.ferreira5727@gmail.com
                     </span>
                   </span>
@@ -142,13 +142,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </div>
         </div>
         {!isMobile && (
-          <div className="shrink-0 border-t border-border py-1.75">
+          <div className="border-border shrink-0 border-t py-1.75">
             <div className="px-[10.5px]">
               <button
                 aria-label="Recolher sidebar"
                 onClick={() => toggleSidebar()}
                 className={cn(
-                  "group flex h-10.5 items-center overflow-hidden pl-3 rounded-[12px] bg-foreground/4 hover:bg-foreground/6 text-foreground/75 hover:text-foreground cursor-pointer transition-all duration-150 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/40",
+                  "group bg-foreground/4 hover:bg-foreground/6 text-foreground/75 hover:text-foreground focus-visible:ring-lime/40 flex h-10.5 cursor-pointer items-center overflow-hidden rounded-[12px] pl-3 transition-all duration-150 ease-out focus-visible:ring-2 focus-visible:outline-none",
                   open
                     ? "w-full active:scale-[0.98]"
                     : "-mx-1 w-10.5 translate-x-1",
@@ -163,7 +163,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <CaretLeftIcon size={19} />
                 </span>
                 {open && (
-                  <span className="ml-2.5 whitespace-nowrap text-[14px] font-medium leading-none">
+                  <span className="ml-2.5 text-[14px] leading-none font-medium whitespace-nowrap">
                     Recolher sidebar
                   </span>
                 )}
