@@ -43,7 +43,12 @@ export default function Editor() {
       </div>
       <div aria-hidden="true" className="bg-border h-px w-full" />
       <div className="@container/editor-row px-8 py-8">
-        <div className="grid grid-cols-2 items-stretch gap-3 @[1080px]/editor-row:grid-cols-[350px_minmax(0,1fr)_320px]">
+        <div
+          className={cn(
+            "grid grid-cols-2 items-stretch gap-3",
+            "@[640px]/editor-row:grid-cols-1 @[1080px]/editor-row:grid-cols-[350px_minmax(0,1fr)_320px]",
+          )}
+        >
           <div
             className={cn(
               "border-border bg-card col-span-2 flex h-fit flex-col gap-4 rounded-lg border p-5 py-4 sm:col-span-1",
