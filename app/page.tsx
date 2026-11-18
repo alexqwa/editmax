@@ -130,7 +130,7 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+    <div className="bg-background text-foreground relative min-h-screen overflow-hidden">
       <Header />
       <main className="relative">
         <section id="hero" className="scroll-mt-26.5 pt-26.5">
@@ -142,7 +142,7 @@ export default function Home() {
               <div className="w-full max-w-345 overflow-hidden rounded-sm bg-white">
                 <div className="relative">
                   <div className="px-8 py-14 lg:px-12 lg:py-20">
-                    <div className="flex items-center gap-3 w-fit">
+                    <div className="flex w-fit items-center gap-3">
                       <AvatarGroup className="hidden lg:flex">
                         <Avatar>
                           <AvatarImage
@@ -202,7 +202,7 @@ export default function Home() {
                           +99
                         </AvatarGroupCount>
                       </AvatarGroup>
-                      <span className="text-[13px] text-muted-foreground">
+                      <span className="text-muted-foreground text-[13px]">
                         <span className="hidden lg:inline">
                           Junte-se aos criadores que já usam a EditMax
                         </span>
@@ -211,7 +211,7 @@ export default function Home() {
                         </span>
                       </span>
                     </div>
-                    <h1 className="mt-8 text-[2.5rem] font-semibold leading-[1.2] tracking-[-0.035em] text-[#052D2B] sm:text-[2.75rem] lg:text-[3.5rem] lg:leading-[1.15]">
+                    <h1 className="mt-8 text-[2.5rem] leading-[1.2] font-semibold tracking-[-0.035em] text-[#052D2B] sm:text-[2.75rem] lg:text-[3.5rem] lg:leading-[1.15]">
                       <span className="block">A máquina de conteúdos</span>
                       <span className="block">
                         para quem quer{" "}
@@ -220,16 +220,16 @@ export default function Home() {
                         </span>
                       </span>
                     </h1>
-                    <p className="mt-7 max-w-2xl text-[18px] leading-[1.7] text-muted-foreground sm:text-[22px] sm:leading-[1.6]">
+                    <p className="text-muted-foreground mt-7 max-w-2xl text-[18px] leading-[1.7] sm:text-[22px] sm:leading-[1.6]">
                       Automatize sua produção de vídeos e transforme horas de
                       trabalho repetitivo em conteúdo pronto para publicar.
                     </p>
                     <div className="mt-9 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center">
-                      <div className="relative inline-flex min-w-0 w-full sm:w-auto">
-                        <div className="inline-flex min-w-0 items-stretch w-full overflow-hidden rounded-lg border-[0.5px] border-white/25 bg-[#B1FE7B] ring-1 [--btn-ring:color-mix(in_oklab,var(--color-foreground)_15%,#B1FE7B)] ring-(--btn-ring) shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] sm:w-auto">
+                      <div className="relative inline-flex w-full min-w-0 sm:w-auto">
+                        <div className="inline-flex w-full min-w-0 items-stretch overflow-hidden rounded-lg border-[0.5px] border-white/25 bg-[#B1FE7B] shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] ring-1 ring-(--btn-ring) [--btn-ring:color-mix(in_oklab,var(--color-foreground)_15%,#B1FE7B)] sm:w-auto">
                           <Link
                             href="https://app.editmax.vercel.app"
-                            className="flex min-w-0 flex-1 items-center justify-center gap-2 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 group/btn h-11 w-full px-6 text-[15px] font-semibold text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060] active:scale-[0.99] active:transition-none"
+                            className="focus-visible:ring-ring group/btn flex h-11 w-full min-w-0 flex-1 items-center justify-center gap-2 px-6 text-[15px] font-semibold whitespace-nowrap text-[#052D2B] transition-all duration-300 hover:bg-[#a0f060] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none active:scale-[0.99] active:transition-none"
                           >
                             <span className="min-w-0">
                               Quero começar automatizar
@@ -239,7 +239,7 @@ export default function Home() {
                       </div>
                       <Link
                         href="#demo"
-                        className="inline-flex h-12 w-full items-center justify-center rounded-lg border border-border/60 bg-white px-6 text-[15px] font-medium text-foreground transition-all duration-200 hover:bg-muted/50 active:scale-[0.99] active:transition-none sm:w-auto"
+                        className="border-border/60 text-foreground hover:bg-muted/50 inline-flex h-12 w-full items-center justify-center rounded-lg border bg-white px-6 text-[15px] font-medium transition-all duration-200 active:scale-[0.99] active:transition-none sm:w-auto"
                       >
                         Ver demonstração
                       </Link>
@@ -249,7 +249,7 @@ export default function Home() {
                     <Image
                       alt="mockup"
                       src={mockupImg}
-                      className="absolute h-[70%] right-10 top-1/2 w-auto -translate-y-1/2"
+                      className="absolute top-1/2 right-10 h-[70%] w-auto -translate-y-1/2"
                     />
                   </div>
                 </div>
@@ -264,40 +264,40 @@ export default function Home() {
               </div>
               <div className="w-full max-w-345 overflow-hidden rounded-sm bg-[#F2F4F8]">
                 <div className="grid grid-cols-2 gap-px lg:grid-cols-4">
-                  <div className="rounded-sm bg-white px-8 py-6 lg:px-10 text-center">
+                  <div className="rounded-sm bg-white px-8 py-6 text-center lg:px-10">
                     <span className="block text-[34px] font-bold tracking-[-0.03em] text-[#052D2B] sm:text-[42px]">
                       <span className="inline-block tabular-nums">10.000</span>
                       <span className="text-[#99E36A]">+</span>
                     </span>
-                    <span className="mt-1.5 block text-[15px] text-muted-foreground">
+                    <span className="text-muted-foreground mt-1.5 block text-[15px]">
                       Vídeos editados em massa
                     </span>
                   </div>
-                  <div className="rounded-sm bg-white px-8 py-6 lg:px-10 text-center">
+                  <div className="rounded-sm bg-white px-8 py-6 text-center lg:px-10">
                     <span className="block text-[34px] font-bold tracking-[-0.03em] text-[#052D2B] sm:text-[42px]">
                       <span className="inline-block tabular-nums">8</span>
                       <span className="text-[#99E36A]">+</span>
                     </span>
-                    <span className="mt-1.5 block text-[15px] text-muted-foreground">
+                    <span className="text-muted-foreground mt-1.5 block text-[15px]">
                       Plataformas integradas
                     </span>
                   </div>
-                  <div className="rounded-sm bg-white px-8 py-6 lg:px-10 text-center">
+                  <div className="rounded-sm bg-white px-8 py-6 text-center lg:px-10">
                     <span className="block text-[34px] font-bold tracking-[-0.03em] text-[#052D2B] sm:text-[42px]">
                       <span className="inline-block tabular-nums">250</span>
                       <span className="text-[#99E36A]">+</span>
                     </span>
-                    <span className="mt-1.5 block text-[15px] text-muted-foreground">
+                    <span className="text-muted-foreground mt-1.5 block text-[15px]">
                       Criadores e empresas
                     </span>
                   </div>
-                  <div className="rounded-sm bg-white px-8 py-6 lg:px-10 text-center">
+                  <div className="rounded-sm bg-white px-8 py-6 text-center lg:px-10">
                     <span className="block text-[34px] font-bold tracking-[-0.03em] text-[#052D2B] sm:text-[42px]">
                       &lt;
                       <span className="inline-block tabular-nums">15</span>
                       <span className="text-[#99E36A]">min</span>
                     </span>
-                    <span className="mt-1.5 block text-[15px] text-muted-foreground">
+                    <span className="text-muted-foreground mt-1.5 block text-[15px]">
                       P/ Gerar 150+ vídeos em massa
                     </span>
                   </div>
@@ -311,18 +311,18 @@ export default function Home() {
               <div className="hidden flex-1 xl:block">
                 <div className="h-full rounded-r-sm bg-white"></div>
               </div>
-              <div className="w-full max-w-345 overflow-hidden rounded-sm bg-white h-12"></div>
+              <div className="h-12 w-full max-w-345 overflow-hidden rounded-sm bg-white"></div>
               <div className="hidden min-w-0.5 flex-1 xl:block">
                 <div className="h-full rounded-l-sm bg-white"></div>
               </div>
             </div>
-            <div id="how-works" className="flex gap-px scroll-mt-28">
+            <div id="how-works" className="flex scroll-mt-28 gap-px">
               <div className="hidden flex-1 xl:block">
                 <div className="h-full rounded-r-sm bg-white"></div>
               </div>
               <div className="w-full max-w-345 overflow-hidden rounded-sm bg-white">
                 <div className="h-4 lg:h-12" />
-                <div className="grid lg:grid-cols-[2.3fr_2fr] lg:min-h-130">
+                <div className="grid lg:min-h-130 lg:grid-cols-[2.3fr_2fr]">
                   <div className="flex flex-col p-8 lg:p-10 lg:pb-8">
                     <span className="inline-flex w-fit items-center rounded-full bg-[#B1FE7B]/50 px-3.5 py-1.5 text-[14px] font-medium text-[#052D2B]">
                       Como funciona?
@@ -388,7 +388,7 @@ export default function Home() {
                       </Link>
                     </div>
                   </div>
-                  <div className="flex items-center py-6 pl-6 pr-3 lg:py-8 lg:pl-8 lg:pr-4">
+                  <div className="flex items-center py-6 pr-3 pl-6 lg:py-8 lg:pr-4 lg:pl-8">
                     <div className="h-full min-h-90 w-full overflow-hidden rounded-xl border border-[#F2F4F8] bg-white p-2.5 shadow-[0_0_0_1px_rgba(0,0,0,0.02)] lg:min-h-70">
                       <div className="h-full w-full overflow-hidden rounded-lg border border-[#F2F4F8]/80 bg-[#FAFBFC] p-1.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.03)]">
                         <video
@@ -417,7 +417,7 @@ export default function Home() {
               <div className="hidden flex-1 xl:block">
                 <div className="relative h-full overflow-hidden rounded-r-sm bg-[#1E4345]" />
               </div>
-              <div className="w-full max-w-345 overflow-hidden rounded-sm bg-[#1E4345] h-10" />
+              <div className="h-10 w-full max-w-345 overflow-hidden rounded-sm bg-[#1E4345]" />
               <div className="hidden min-w-0.5 flex-1 xl:block">
                 <div className="relative h-full overflow-hidden rounded-l-sm bg-[#1E4345]" />
               </div>
@@ -438,21 +438,21 @@ export default function Home() {
                         <button
                           type="button"
                           aria-label="Anterior"
-                          className="flex size-10 group cursor-pointer items-center justify-center rounded-full border-[0.5px] border-white/15 bg-white/4 transition-colors duration-150 hover:bg-white/8 hover:text-white"
+                          className="group flex size-10 cursor-pointer items-center justify-center rounded-full border-[0.5px] border-white/15 bg-white/4 transition-colors duration-150 hover:bg-white/8 hover:text-white"
                         >
                           <CaretLeftIcon
                             size={18}
-                            className="text-white/80 group-hover:text-white transition-colors duration-150"
+                            className="text-white/80 transition-colors duration-150 group-hover:text-white"
                           />
                         </button>
                         <button
                           type="button"
                           aria-label="Anterior"
-                          className="flex size-10 group cursor-pointer items-center justify-center rounded-full border-[0.5px] border-white/15 bg-white/4 transition-colors duration-150 hover:bg-white/8 hover:text-white"
+                          className="group flex size-10 cursor-pointer items-center justify-center rounded-full border-[0.5px] border-white/15 bg-white/4 transition-colors duration-150 hover:bg-white/8 hover:text-white"
                         >
                           <CaretRightIcon
                             size={18}
-                            className="text-white/80 group-hover:text-white transition-colors duration-150"
+                            className="text-white/80 transition-colors duration-150 group-hover:text-white"
                           />
                         </button>
                       </div>
@@ -481,7 +481,7 @@ export default function Home() {
                             </span>
                           </span>
                         </h2>
-                        <div className="mt-10 hidden sm:flex items-center gap-6 text-white/30">
+                        <div className="mt-10 hidden items-center gap-6 text-white/30 sm:flex">
                           <div className="flex items-center gap-2">
                             <ShieldCheckIcon
                               size={16}
@@ -502,11 +502,11 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <p className="max-w-sm text-[15px] leading-[1.75] lg:text-right text-white/60">
+                      <p className="max-w-sm text-[15px] leading-[1.75] text-white/60 lg:text-right">
                         Um plano para acompanhar o ritmo da sua produção. Edite,
                         automatize e publique em escala.
                       </p>
-                      <div className="sm:mt-10 sm:hidden flex items-center gap-6 text-white/30">
+                      <div className="flex items-center gap-6 text-white/30 sm:mt-10 sm:hidden">
                         <div className="flex items-center gap-2">
                           <ShieldCheckIcon
                             size={16}
@@ -530,7 +530,7 @@ export default function Home() {
                   </div>
                   <div className="h-4 lg:h-12" />
                 </div>
-                <div className="grid-cols-1 lg:grid-cols-3 grid gap-px">
+                <div className="grid grid-cols-1 gap-px lg:grid-cols-3">
                   {plans.map((item) => (
                     <PlanCard
                       key={item.id}
@@ -554,7 +554,7 @@ export default function Home() {
               <div className="hidden flex-1 xl:block">
                 <div className="relative h-full overflow-hidden rounded-r-sm bg-[#1E4345]" />
               </div>
-              <div className="w-full max-w-345 overflow-hidden rounded-sm bg-[#1E4345] h-10" />
+              <div className="h-10 w-full max-w-345 overflow-hidden rounded-sm bg-[#1E4345]" />
               <div className="hidden min-w-0.5 flex-1 xl:block">
                 <div className="relative h-full overflow-hidden rounded-l-sm bg-[#1E4345]" />
               </div>
@@ -597,14 +597,14 @@ export default function Home() {
                     </div>
                     <div className="mt-10 flex items-center gap-5">
                       <a
-                        className="inline-flex items-center gap-2 text-[13px] text-[#6B7280] transition-colors duration-200 hover:text-primary"
+                        className="hover:text-primary inline-flex items-center gap-2 text-[13px] text-[#6B7280] transition-colors duration-200"
                         href="/privacidade"
                       >
                         <LinkIcon size={24} className="size-3.5 shrink-0" />
                         Política de privacidade
                       </a>
                       <a
-                        className="inline-flex items-center gap-2 text-[13px] text-[#6B7280] transition-colors duration-200 hover:text-primary"
+                        className="hover:text-primary inline-flex items-center gap-2 text-[13px] text-[#6B7280] transition-colors duration-200"
                         href="/privacidade"
                       >
                         <LinkIcon size={24} className="size-3.5 shrink-0" />
@@ -625,7 +625,7 @@ export default function Home() {
               <div className="hidden flex-1 xl:block">
                 <div className="h-full rounded-r-sm bg-white" />
               </div>
-              <div className="w-full max-w-345 overflow-hidden rounded-sm bg-white h-12" />
+              <div className="h-12 w-full max-w-345 overflow-hidden rounded-sm bg-white" />
               <div className="hidden min-w-0.5 flex-1 xl:block">
                 <div className="h-full rounded-l-sm bg-white" />
               </div>
@@ -639,7 +639,7 @@ export default function Home() {
             <div className="h-full border-r border-[#F2F4F8] bg-white"></div>
           </div>
           <div className="w-full max-w-345 bg-white">
-            <div className="px-8 pb-10 pt-16 lg:px-10">
+            <div className="px-8 pt-16 pb-10 lg:px-10">
               <div className="grid gap-12 lg:grid-cols-[1fr_auto]">
                 <div className="max-w-sm">
                   <Image
@@ -655,22 +655,14 @@ export default function Home() {
                 </div>
                 <div className="grid grid-cols-2 gap-x-16 gap-y-8">
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.15em] text-foreground">
+                    <p className="text-foreground text-[12px] font-semibold tracking-[0.15em] uppercase">
                       Navegação
                     </p>
                     <ul className="mt-4 space-y-3">
                       <li>
                         <Link
-                          href="/#feature-stories"
-                          className="text-[14px] text-[#6B7280] transition-colors duration-200 hover:text-foreground"
-                        >
-                          Funcionalidades
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
                           href="/#pricing"
-                          className="text-[14px] text-[#6B7280] transition-colors duration-200 hover:text-foreground"
+                          className="hover:text-foreground text-[14px] text-[#6B7280] transition-colors duration-200"
                         >
                           Preços
                         </Link>
@@ -678,7 +670,7 @@ export default function Home() {
                       <li>
                         <Link
                           href="/#faq"
-                          className="text-[14px] text-[#6B7280] transition-colors duration-200 hover:text-foreground"
+                          className="hover:text-foreground text-[14px] text-[#6B7280] transition-colors duration-200"
                         >
                           Dúvidas
                         </Link>
@@ -686,7 +678,7 @@ export default function Home() {
                       <li>
                         <Link
                           href="/"
-                          className="text-[14px] text-[#6B7280] transition-colors duration-200 hover:text-foreground"
+                          className="hover:text-foreground text-[14px] text-[#6B7280] transition-colors duration-200"
                         >
                           Plataforma
                         </Link>
@@ -694,13 +686,13 @@ export default function Home() {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.15em] text-foreground">
+                    <p className="text-foreground text-[12px] font-semibold tracking-[0.15em] uppercase">
                       Legal
                     </p>
                     <ul className="mt-4 space-y-3">
                       <li>
                         <Link
-                          className="text-[14px] text-[#6B7280] transition-colors duration-200 hover:text-foreground"
+                          className="hover:text-foreground text-[14px] text-[#6B7280] transition-colors duration-200"
                           href="/privacidade"
                         >
                           Privacidade
@@ -708,7 +700,7 @@ export default function Home() {
                       </li>
                       <li>
                         <Link
-                          className="text-[14px] text-[#6B7280] transition-colors duration-200 hover:text-foreground"
+                          className="hover:text-foreground text-[14px] text-[#6B7280] transition-colors duration-200"
                           href="/termos"
                         >
                           Termos de uso
